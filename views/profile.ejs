@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title><%=title %></title>
+        <link rel="stylesheet" href="/css/profile.css">
+    </head>
+    <body>
+        <h1 id="heading">Profile page</h1>
+        <div id="list-content">
+        <ul id="list">
+        <% for(let i=0;i<contact_list.length;i++){ %>
+            <li>
+                <div id="inner-content">
+                    <p><%=contact_list[i].name%></p>
+                     <p><%=contact_list[i].number%></p>
+                     <p><a href="/delete-contact/?id=<%=contact_list[i]._id%>">X</a></p>
+                </div>
+                <div></div>
+            
+        </li>
+        <%}%>
+        </ul>
+        </div>
+        <div style="text-align: center;">
+            <h3>Form for sending the data</h3>
+            <form action="/create-contact" method="POST">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="number" name="number" placeholder="Enter your number" required>
+                <input type="submit">
+            </form>
+        </div>
+        <script src="/js/profile.js"></script>
+        
+
+    </body>
+</html>

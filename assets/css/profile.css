@@ -1,0 +1,33 @@
+body{
+    
+    margin: 0;
+    font-family: sans-serif;
+}
+#heading{
+    text-align: center;
+    color: grey;
+    font-weight: bold;
+}
+#list{
+    list-style: none;
+}
+#list-content{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#inner-content{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    margin-top: 5px;
+    width: 400px;
+    height: max-content;
+    background-color: rgb(202, 159, 243);
+    color: white;
+}
+p{
+    font-size: large;
+    font-weight: bolder;
+}
